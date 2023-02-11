@@ -6,7 +6,7 @@ import os
 
 
 def main():
-    request = hello_pb2.HelloRequest(name="david")
+    request = hello_pb2.HelloRequest(name="World")
   
     response = stub.SayHello(request)
     print(response)

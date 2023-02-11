@@ -14,7 +14,7 @@ helm repo update
 helm install ingress-nginx ingress-nginx/ingress-nginx
 ```
 
-- No momento que o ingress-nginx é instalado, ele cria um LoadBalancer no GCP, que pode ser acessado pelo IP externo (ou interno se preferir).
+- No momento que o ingress-nginx é instalado, ele cria um LoadBalancer no GCP, que pode ser acessado pelo IP externo (pode ser alterado para rede interna se preferir).
 
 ### Criando certificado auto assinado (Opcional)
 
@@ -59,15 +59,15 @@ GRPC_SERVER="127.0.0.1.xip.io:443" python3 client/client.py
 O resultado será algo como:
 
 ```bash
-message: "Hello david from go-grpc-server-cf6d9b6cd-gdfm6"
+message: "Hello World from go-grpc-server-cf6d9b6cd-gdfm6"
 
-message: "Hello david from go-grpc-server-cf6d9b6cd-ghdr9"
+message: "Hello World from go-grpc-server-cf6d9b6cd-ghdr9"
 
-message: "Hello david from go-grpc-server-cf6d9b6cd-6tnv4"
+message: "Hello World from go-grpc-server-cf6d9b6cd-6tnv4"
 
-message: "Hello david from go-grpc-server-cf6d9b6cd-r6f8j"
+message: "Hello World from go-grpc-server-cf6d9b6cd-r6f8j"
 
-message: "Hello david from go-grpc-server-cf6d9b6cd-gdfm6"
+message: "Hello World from go-grpc-server-cf6d9b6cd-gdfm6"
 ```
 
 O metódo de load balancing usado no arquivo está definido como round_robin, mas existem outros métodos disponíveis, como por exemplo: least_conn, random, etc.

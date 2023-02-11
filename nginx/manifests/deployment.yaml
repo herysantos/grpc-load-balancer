@@ -2,17 +2,17 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: go-grpc-greeter-server
-  name: go-grpc-greeter-server
+    app: go-grpc-server
+  name: go-grpc-server
 spec:
   replicas: 4
   selector:
     matchLabels:
-      app: go-grpc-greeter-server
+      app: go-grpc-server
   template:
     metadata:
       labels:
-        app: go-grpc-greeter-server
+        app: go-grpc-server
     spec:
       containers:
       - image: david13356/grpc-go-test:latest # Edit this for your reponame
@@ -23,6 +23,6 @@ spec:
           requests:
             cpu: 50m
             memory: 50Mi
-        name: go-grpc-greeter-server
+        name: go-grpc-server
         ports:
         - containerPort: 50051

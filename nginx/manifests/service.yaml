@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: go-grpc-greeter-server
-  name: go-grpc-greeter-server
+    app: go-grpc-server
+  name: go-grpc-server
 spec:
   ports:
   - name: grpc
@@ -11,5 +11,5 @@ spec:
     protocol: TCP
     targetPort: 50051
   selector:
-    app: go-grpc-greeter-server
+    app: go-grpc-server
   type: ClusterIP

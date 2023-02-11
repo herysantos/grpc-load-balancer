@@ -16,7 +16,7 @@ helm install ingress-nginx ingress-nginx/ingress-nginx
 
 - No momento que o ingress-nginx é instalado, ele cria um LoadBalancer no GCP, que pode ser acessado pelo IP externo (pode ser alterado para rede interna se preferir).
 
-### Criando certificado auto assinado (Opcional)
+### Criando certificado auto assinado
 
 Para uso do grpc no nginx ingress controller o uso de um certificado TLS e um domínio é obrigatório conforme a documentação.
 

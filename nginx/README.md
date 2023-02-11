@@ -28,13 +28,13 @@ openssl req -x509 -newkey rsa:4096 -sha256 -days 3650 -nodes \
   -addext "subjectAltName=DNS:127.0.0.1.xip.io"
 ```
 
-### Kubectl
-
-Antes de aplicar o manifesto crie o secret tls contendo os certificados já criados anteriormente:
-
 ```bash
 kubectl create secret tls xip-tls --cert=certs/xip.crt --key=certs/xip.key
 ```
+
+### Kubectl
+
+Aplique os manifestos incluindo o recurso de ingress:
 
 ```bash
 kubectl apply -f manifests/

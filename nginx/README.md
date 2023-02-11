@@ -18,6 +18,8 @@ helm install ingress-nginx ingress-nginx/ingress-nginx
 
 ### Criando certificado auto assinado (Opcional)
 
+Para uso do grpc no nginx ingress controller o uso de um certificado TLS e um domínio é obrigatório conforme a documentação.
+
 O certificado auto assinado para esse exemplo já foi criado e está em certs, mas pra caso quiser criar um novo, segue o comando:
 
 ```bash
